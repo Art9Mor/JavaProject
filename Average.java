@@ -4,9 +4,9 @@ public class Average {
     public static void main(String[] args) {
         int start;
         int finish;
-        int i = 1;
-        i = i + 1;
         int sum = 0;
+        int sum2 = 0;
+        int count = 0;
 
 
         Scanner scanner = new Scanner(System.in);
@@ -17,13 +17,17 @@ public class Average {
         System.out.print("Ending of the range: ");
         finish = scanner.nextInt();
 
-        do {
-            int count = scanner.nextInt();
-            sum += i;
-            ++i;
-            double average = (double) (sum) / count;
-            System.out.println("Average= " + average);
+        for(int i = start; i <= finish; i++) {
+            sum +=i;
+            if(i%2 == 0){
+                sum2+= i;
+                count ++;
+            }
         }
-        while (i >= 17);
+        double average = (double) (sum) / (finish - start);
+        System.out.println("Average= " + average);
+
+        double average2 = (double) (sum2) / count;
+        System.out.println("Average2= " + average2);
     }
 }
