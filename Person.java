@@ -1,12 +1,10 @@
 import java.util.Calendar;
 
-
 public class Person {
-
-    private String name;
-    private String middleName;
-    private String familyName;
-    private int age;
+    private final String name;
+    private final String middleName;
+    private final String familyName;
+    private final int age;
 
     public Person(String name, String middleName, String familyName, int age) {
         this.name = name;
@@ -34,7 +32,7 @@ public class Person {
     }
 
     @Override
-    public String toString () {
+    public String toString() {
         return name + " " + middleName + " " + familyName + " " + age;
     }
 }
