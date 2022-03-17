@@ -4,7 +4,8 @@ public class Average {
     public static void main(String[] args) {
         int start;
         int finish;
-        int i = 0;
+        int i = 1;
+        i = i + 1;
         int sum = 0;
 
 
@@ -16,9 +17,13 @@ public class Average {
         System.out.print("Ending of the range: ");
         finish = scanner.nextInt();
 
-        if (i < 17) {
-            System.out.println("Внутри диапазона");
+        do {
+            int count = scanner.nextInt();
+            sum += i;
+            ++i;
+            double average = (double) (sum) / count;
+            System.out.println("Average= " + average);
         }
-
-        double average = (double) (start + finish) /2;
-        System.out.println("Average= " + average);
+        while (i >= 17);
+    }
+}
