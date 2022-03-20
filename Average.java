@@ -4,30 +4,32 @@ public class Average {
     public static void main(String[] args) {
         int start;
         int finish;
-        int sum = 0;
+        int sum1 = 0;
         int sum2 = 0;
-        int count = 0;
+        int count1 = 0;
+        int count2 = 0;
 
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Beginning of the range: ");
+        System.out.print("Enter the beginning of the number range: ");
         start = scanner.nextInt();
 
-        System.out.print("Ending of the range: ");
+        System.out.print("Enter the ending of the number range: ");
         finish = scanner.nextInt();
 
-        for(int i = start; i <= finish; i++) {
-            sum +=i;
-            if(i%2 == 0){
-                sum2+= i;
-                count ++;
-            }
+        while (start <= finish) {
+            sum1 += start;
+            count1++;
+        if (start % 2 == 0) {
+            sum2 +=start;
+            count2++;
         }
-        double average = (double) (sum) / (finish - start);
-        System.out.println("Average= " + average);
-
-        double average2 = (double) (sum2) / count;
-        System.out.println("Average2= " + average2);
+        ++start;
+    }
+        double average1 = (double) sum1 / count1;
+        System.out.println("Average = " + average1);
+        double average2 = (double) sum2 / count2;
+        System.out.println("Average for even numbers = " + average2);
     }
 }
