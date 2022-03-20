@@ -13,7 +13,22 @@ public class Person {
         this.age = age;
     }
 
-    Calendar cal = Calendar.getInstance();
+    public String getName() {
+        return name;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public String getFamilyName() {
+        return familyName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
 
     public void printName() {
         System.out.println("Name: " + name);
@@ -27,7 +42,9 @@ public class Person {
         System.out.println("Family name: " + familyName);
     }
 
-    public void printAge() {
+    public void countAge() {
+        Calendar cal = Calendar.getInstance();
+
         System.out.println("Age: " + (cal.get(Calendar.YEAR) - age));
     }
 
@@ -36,3 +53,4 @@ public class Person {
         return name + " " + middleName + " " + familyName + " " + age;
     }
 }
+
