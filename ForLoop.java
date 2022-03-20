@@ -1,8 +1,9 @@
 public class ForLoop {
     public static void main(String[] args) {
+        System.out.println("Four Loop numbers");
         for (int i = 100; i >= 1; i--) {
             if (i % 4 == 0) {
-                System.out.print("Number " + i + ",");
+                System.out.print(i + " ");
             }
         }
     }
