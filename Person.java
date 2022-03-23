@@ -45,7 +45,7 @@ public class Person {
     public void countAge() {
         Calendar cal = Calendar.getInstance();
 
-        System.out.println("Age: " + (cal.get(Calendar.YEAR) - age));
+        System.out.println("Year: " + (cal.get(Calendar.YEAR) - age));
     }
 
     @Override
@@ -53,4 +53,3 @@ public class Person {
         return name + " " + middleName + " " + familyName + " " + age;
     }
 }
-
